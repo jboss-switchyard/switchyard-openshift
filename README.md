@@ -13,7 +13,7 @@ Create a jbossas-7.0 application
 Add this upstream SwitchYard repo
 
     cd swydapp
-    git remote add upstream -m master git://github.com/mageshbk/openshift-express.git
+    git remote add upstream -m master git://github.com/jboss-switchyard/switchyard-openshift.git
     git pull -s recursive -X theirs upstream master
     git apply standalone.diff
     git add .
@@ -27,17 +27,26 @@ That's it, you can now checkout your application at:
 
     http://swydapp-$yourdomain.rhcloud.com
 
+Samples deployed with your application
+--------------------------------------
+
 This repository will deploy a sample called osdemo.jar binary deployment. You can
 checkout the SOAP WSDL of this sample at
 
     http://swydapp-$yourdomain.rhcloud.com/swydws/ProcessOrder?wsdl
+
+Source development
+------------------
 
 This repository is also a barebone SwitchYard application for source development.
 Read more at the cloud link posted above of your application on how to build and
 deploy a new SwitchYard application from scratch.
 
 Remember to enable openshift profile, if you update the source files, by renaming
-the pom.xml's profile from 
+the pom.xml's profile from
+
     <id>switchyard</id>
+
 to
+
     <id>openshift</id>

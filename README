@@ -1,6 +1,6 @@
 Repo layout
 =========== 
-deployments/ - location for built wars/jars (Details below)
+deployments/ - location for built jars/wars (Details below)
 src/ - maven src structure
 pom.xml - maven build file  
 .openshift/ - location for openshift specific files
@@ -12,16 +12,14 @@ pom.xml - maven build file
 
 Details about layout and deployment options
 ==================
-There are two options for deploying content to the JBoss Application Server within OpenShift Express:
+There are two options for deploying content to the SwitchYard enabled JBoss Application Server within OpenShift Express:
 
 1) (Typical) You can upload your content in a maven src structure as is this sample project and on 
 git push have the application built and deployed.  For this to work you'll need your pom.xml at the 
-root of your repository and a maven-war-plugin like in this sample to move the output from the build
-to the deployments directory.  By default the warName is ROOT within pom.xml.  This will cause the 
-webapp contents to be rendered at http://app_name-namespace.rhcloud.com/.  If you change the warName in 
-pom.xml to app_name, your base url would then become http://app_name-namespace.rhcloud.com/app_name.
+root of your repository and a maven-jar-plugin like in this sample to move the output from the build
+to the deployments directory.
 
-Note: If you are building locally you'll also want to add any output wars/ears under deployments 
+Note: If you are building locally you'll also want to add any output jars/wars/ears under deployments 
 from the build to your .gitignore file.
 
 or
