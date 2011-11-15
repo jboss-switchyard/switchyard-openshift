@@ -7,7 +7,7 @@
   <version>1.0</version>
   <name>swydapp</name>
   <properties>
-    <switchyard.version>0.3.0-SNAPSHOT</switchyard.version>
+    <switchyard.version>0.3.0.CR1</switchyard.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
@@ -74,9 +74,6 @@
                 <configuration>
                   <scannerClassNames>
                     <param>org.switchyard.component.bean.config.model.BeanSwitchYardScanner</param>
-                    <param>org.switchyard.component.camel.config.model.RouteScanner</param>
-                    <param>org.switchyard.component.bpm.config.model.BpmSwitchYardScanner</param>
-                    <param>org.switchyard.component.rules.config.model.RulesSwitchYardScanner</param>
                     <param>org.switchyard.transform.config.model.TransformSwitchYardScanner</param>
                   </scannerClassNames>
                 </configuration>
