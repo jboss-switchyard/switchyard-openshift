@@ -6,9 +6,9 @@ OpenShift Express.
 
 Create an account at http://openshift.redhat.com/
 
-Create a jbossas-7.0 application
+Create a jbossas-7 application
 
-    rhc-create-app -a swydapp -t jbossas-7.0
+    rhc-create-app -a swydapp -t jbossas-7
 
 Add this upstream SwitchYard repo
 
