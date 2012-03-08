@@ -7,7 +7,7 @@
   <version>1.0</version>
   <name>swydapp</name>
   <properties>
-    <switchyard.version>0.3.0.Final</switchyard.version>
+    <switchyard.version>0.4.0.OS1</switchyard.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
