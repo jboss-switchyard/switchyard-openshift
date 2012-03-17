@@ -1,17 +1,17 @@
 diff --git a/.openshift/config/standalone.xml b/.openshift/config/standalone.xml
-index 67bdc3f..a76f85e 100644
+index f28ad78..e30dec2 100644
 --- a/.openshift/config/standalone.xml
 +++ b/.openshift/config/standalone.xml
-@@ -23,6 +23,7 @@
-         <extension module="org.jboss.as.transactions"/>
+@@ -32,6 +32,7 @@
          <extension module="org.jboss.as.web"/>
+         <extension module="org.jboss.as.webservices"/>
          <extension module="org.jboss.as.weld"/>
-+        <extension module="org.switchyard"/>
++	<extension module="org.switchyard"/>
      </extensions>
  
-     <!--management>
-@@ -256,6 +257,22 @@
-             </virtual-server>
+     <management>
+@@ -486,6 +487,22 @@
+             </endpoint-config>
          </subsystem>
          <subsystem xmlns="urn:jboss:domain:weld:1.0"/>
 +        <subsystem xmlns="urn:jboss:domain:switchyard:1.0">
@@ -33,11 +33,12 @@ index 67bdc3f..a76f85e 100644
      </profile>
  
      <interfaces>
-@@ -275,6 +292,7 @@
-         <socket-binding name="remoting" port="4447"/-->
+@@ -516,6 +533,7 @@
+         <socket-binding name="remoting" port="4447"/>
          <socket-binding name="txn-recovery-environment" port="4712"/>
          <socket-binding name="txn-status-manager" port="4713"/>
 +        <socket-binding name="switchyard-ws" port="18001"/>
          <outbound-socket-binding name="mail-smtp">
              <remote-destination host="localhost" port="25"/>
          </outbound-socket-binding>
+
