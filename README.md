@@ -6,9 +6,12 @@ OpenShift Express.
 
 Create an account at http://openshift.redhat.com/
 
-Create a jbossas-7 application
+Use the 'rhc' client tool to create a new application.  These instructions assume the name
+'swydapp' is used, but you can use any name you like.  The application type can be 'jboss-as7' 
+or 'jbosseap-6.0'.  To include the SwitchYard modules in your application instance, include 
+'switchyard-0.6' in the list of cartridges as well.
 
-    rhc-create-app -a swydapp -t jbossas-7
+    rhc app create swydapp jbosseap-6.0 switchyard-0.6
 
 Add this upstream SwitchYard repo
 
@@ -33,7 +36,7 @@ Samples deployed with your application
 This repository will deploy a sample called osdemo.jar binary deployment. You can
 checkout the SOAP WSDL of this sample at
 
-    http://swydapp-$yourdomain.rhcloud.com/swydws/OrderService?wsdl
+    http://swydapp-$yourdomain.rhcloud.com/OrderService/OrderService?wsdl
 
 You can test this application using your favourite SOAP client. A valid SOAP request
 is shown here:
