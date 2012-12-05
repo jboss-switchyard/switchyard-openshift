@@ -1,20 +1,20 @@
 diff --git a/.openshift/config/standalone.xml b/.openshift/config/standalone.xml
-index f489973..ca0904e 100644
+index 484919a..dd69bdd 100644
 --- a/.openshift/config/standalone.xml
 +++ b/.openshift/config/standalone.xml
 @@ -32,6 +32,7 @@
-         <extension module="org.jboss.as.web"/>
-         <extension module="org.jboss.as.webservices"/>
-         <extension module="org.jboss.as.weld"/>
-+        <extension module="org.switchyard"/>
-     </extensions>
- 
-     <management>
-@@ -492,6 +493,27 @@
-             </endpoint-config>
-         </subsystem>
-         <subsystem xmlns="urn:jboss:domain:weld:1.0"/>
-+        <subsystem xmlns="urn:jboss:domain:switchyard:1.0">
+ 		<extension module="org.jboss.as.web" />
+ 		<extension module="org.jboss.as.webservices" />
+ 		<extension module="org.jboss.as.weld" />
++		<extension module="org.switchyard"/>
+ 	</extensions>
+ 	
+ 	<system-properties>
+@@ -496,6 +497,27 @@
+ 			</endpoint-config>
+ 		</subsystem>
+ 		<subsystem xmlns="urn:jboss:domain:weld:1.0" />
++		<subsystem xmlns="urn:jboss:domain:switchyard:1.0">
 +            <socket-binding names="switchyard-ws"/>
 +            <modules>
 +                <module identifier="org.switchyard.component.bean" implClass="org.switchyard.component.bean.deploy.BeanComponent"/>
@@ -35,14 +35,14 @@ index f489973..ca0904e 100644
 +                <module identifier="org.switchyard.component.http" implClass="org.switchyard.component.http.deploy.HttpComponent"/>
 +            </modules>
 +        </subsystem>
-     </profile>
+ 	</profile>
  
-     <interfaces>
-@@ -522,6 +544,7 @@
-         <socket-binding name="remoting" port="4447"/>
-         <socket-binding name="txn-recovery-environment" port="4712"/>
-         <socket-binding name="txn-status-manager" port="4713"/>
-+        <socket-binding name="switchyard-ws" port="18001"/>
-         <outbound-socket-binding name="mail-smtp">
-             <remote-destination host="localhost" port="25"/>
-         </outbound-socket-binding>
+ 	<interfaces>
+@@ -534,6 +556,7 @@
+ 		<socket-binding name="remoting" port="4447" />
+ 		<socket-binding name="txn-recovery-environment" port="4712" />
+ 		<socket-binding name="txn-status-manager" port="4713" />
++		<socket-binding name="switchyard-ws" port="18001"/>
+ 		<outbound-socket-binding name="mail-smtp">
+ 			<remote-destination host="localhost" port="25" />
+ 		</outbound-socket-binding>
