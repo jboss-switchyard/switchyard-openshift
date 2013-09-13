@@ -10,6 +10,11 @@
     <switchyard.version>0.4.0.OS1</switchyard.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+    <scm>
+        <connection>scm:git:ssh//github.com/jboss-switchyard/switchyard-openshift.git</connection>
+        <developerConnection>scm:git:ssh://github.com/jboss-switchyard/switchyard-openshift.git</developerConnection>
+        <url>http://github.com/jboss-switchyard/switchyard-openshift</url>
+    </scm>
   <dependencies>
     <dependency>
       <groupId>org.switchyard</groupId>
